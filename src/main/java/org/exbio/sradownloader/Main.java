@@ -9,6 +9,7 @@ import java.io.IOException;
 
 public class Main {
     static File workingDirectory;
+    static Configs configs;
 
     public static void main(String[] args) throws IOException {
         workingDirectory = new File(args[0]);
@@ -16,10 +17,10 @@ public class Main {
         ExecutionManager.setThreadNumber(Integer.parseInt(args[1]));
         ExecutionManager.disableHashing();
 
-        Configs configs = new Configs();
+        configs = new Configs();
         configs.merge(new File(args[2]));
 
-        ExecutableStep download = new Download(configs.runTable, configs.fasterqDump, configs.excludeTreatments);
+        ExecutableStep download = new Download();
 
         ExecutionManager manager = new ExecutionManager(download);
         manager.run();
