@@ -20,7 +20,7 @@ public class Main {
         configs = new Configs();
         configs.merge(new File(args[2]));
 
-        ExecutableStep download = new Download();
+        ExecutableStep download = new SraDownload();
 
         ExecutionManager manager = new ExecutionManager(download);
         manager.run();

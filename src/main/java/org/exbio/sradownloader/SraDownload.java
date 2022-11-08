@@ -15,12 +15,12 @@ import java.util.concurrent.Callable;
 import static org.exbio.pipejar.util.FileManagement.readLines;
 import static org.exbio.pipejar.util.ScriptExecution.executeAndWait;
 
-public class Download extends ExecutableStep {
+public class SraDownload extends ExecutableStep {
     public final RequiredConfig<File> runTable = new RequiredConfig<>(Main.configs.runTable);
     public final RequiredConfig<String> fasterqDump = new RequiredConfig<>(Main.configs.fasterqDump);
     public final OptionalConfig<List> excludeTreatments = new OptionalConfig<>(Main.configs.excludeTreatments, false);
 
-    public Download(OutputFile... dependencies) {
+    public SraDownload(OutputFile... dependencies) {
         super(dependencies);
         addInput(runTable);
 
@@ -49,7 +49,7 @@ public class Download extends ExecutableStep {
                         fasterqDump.get() + " -p --split-spot --concatenate-reads -O " + fastqFile.getParent() + " " +
                                 srr;
                 add(() -> {
-                    executeAndWait(command);
+                    executeAndWait(command, true);
                     fastqFile.setState(OutputFile.states.Created);
                     return true;
                 });
