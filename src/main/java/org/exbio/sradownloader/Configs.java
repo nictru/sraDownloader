@@ -11,6 +11,7 @@ public class Configs extends ConfigModule {
     public final InputConfig<File> runTable = new ExternalConfig<>(File.class);
     public final InputConfig<String> fasterqDump = new ExternalConfig<>(String.class);
     public final InputConfig<List> excludeTreatments = new ExternalConfig<>(List.class);
+    public final InputConfig<String> gzipExecutable = new ExternalConfig<>(String.class);
 
     public Configs() {
         super.init();

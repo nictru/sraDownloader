@@ -26,7 +26,8 @@ public class SraDownload extends ExecutableStep {
 
         // Add outputs for required srr ids
         try {
-            readLines(runTable.get()).stream().skip(1).map(line -> line.split(",")).filter(splittedLine -> {
+            readLines(runTable.get()).stream().filter(line -> line.startsWith("SRR")).map(
+                    line -> line.split(",")).filter(splittedLine -> {
                 if (!excludeTreatments.isSet()) {
                     return true;
                 }
@@ -50,7 +51,6 @@ public class SraDownload extends ExecutableStep {
                                 srr;
                 add(() -> {
                     executeAndWait(command, true);
-                    fastqFile.setState(OutputFile.states.Created);
                     return true;
                 });
             });

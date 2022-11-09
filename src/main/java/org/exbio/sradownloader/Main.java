@@ -1,7 +1,6 @@
 package org.exbio.sradownloader;
 
 import org.exbio.pipejar.configs.ConfigTypes.FileTypes.OutputFile;
-import org.exbio.pipejar.pipeline.ExecutableStep;
 import org.exbio.pipejar.pipeline.ExecutionManager;
 
 import java.io.File;
@@ -15,14 +14,14 @@ public class Main {
         workingDirectory = new File(args[0]);
         ExecutionManager.workingDirectory = new OutputFile(args[0]);
         ExecutionManager.setThreadNumber(Integer.parseInt(args[1]));
-        ExecutionManager.disableHashing();
 
         configs = new Configs();
         configs.merge(new File(args[2]));
 
-        ExecutableStep download = new SraDownload();
+        SraDownload download = new SraDownload();
+        CompressFastq compress = new CompressFastq(download.getOutputs());
 
-        ExecutionManager manager = new ExecutionManager(download);
+        ExecutionManager manager = new ExecutionManager(download, compress);
         manager.run();
     }
 }
