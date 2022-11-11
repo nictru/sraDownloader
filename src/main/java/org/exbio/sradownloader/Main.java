@@ -20,8 +20,10 @@ public class Main {
 
         SraDownload download = new SraDownload();
         CompressFastq compress = new CompressFastq(download.getOutputs());
+        CreateSampleSheet createSampleSheet = new CreateSampleSheet(compress.getOutputs());
+        NfCoreRnaSeq nfCoreRnaSeq = new NfCoreRnaSeq(compress.getOutputs(), createSampleSheet.sampleSheet);
 
-        ExecutionManager manager = new ExecutionManager(download, compress);
+        ExecutionManager manager = new ExecutionManager(download, compress, createSampleSheet, nfCoreRnaSeq);
         manager.run();
     }
 }

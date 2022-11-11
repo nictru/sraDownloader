@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="067ff42c-d973-4260-874a-7324fe457952" name="Changes" comment="Redirect command output to console">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/CompressFastq.java" afterDir="false" />
+    <list default="true" id="067ff42c-d973-4260-874a-7324fe457952" name="Changes" comment="Working fastq compression">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/CreateSampleSheet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/NfCoreRnaSeq.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Configs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Main.java" afterDir="false" />
@@ -68,7 +69,6 @@
       <option name="MAIN_CLASS_NAME" value="org.exbio.sradownloader.Main" />
       <module name="SraDownloader" />
       <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Data/sraDownloader 8 $USER_HOME$/Data/sraDownloader/_meta/config.json" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Data/sraDownloader" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -90,7 +90,11 @@
       <workItem from="1667889602159" duration="1079000" />
       <workItem from="1667896845583" duration="5314000" />
       <workItem from="1667905976211" duration="7078000" />
-      <workItem from="1668002226801" duration="1180000" />
+      <workItem from="1668002226801" duration="1781000" />
+      <workItem from="1668063763234" duration="6000" />
+      <workItem from="1668076752996" duration="773000" />
+      <workItem from="1668099882225" duration="13000" />
+      <workItem from="1668192711588" duration="7303000" />
     </task>
     <task id="LOCAL-00001" summary="Make SRA download cleaner">
       <created>1667855588919</created>
@@ -106,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667890039660</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Working fastq compression">
+      <created>1668003477085</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1668003477085</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +137,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Make SRA download cleaner" />
     <MESSAGE value="Redirect command output to console" />
-    <option name="LAST_COMMIT_MESSAGE" value="Redirect command output to console" />
+    <MESSAGE value="Working fastq compression" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working fastq compression" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
