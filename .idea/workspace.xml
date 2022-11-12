@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="067ff42c-d973-4260-874a-7324fe457952" name="Changes" comment="Working fastq compression">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/CreateSampleSheet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/NfCoreRnaSeq.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Configs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/SraDownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/SraDownload.java" afterDir="false" />
-    </list>
+    <list default="true" id="067ff42c-d973-4260-874a-7324fe457952" name="Changes" comment="Working fastq compression" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -95,6 +88,7 @@
       <workItem from="1668076752996" duration="773000" />
       <workItem from="1668099882225" duration="13000" />
       <workItem from="1668192711588" duration="7303000" />
+      <workItem from="1668241665621" duration="657000" />
     </task>
     <task id="LOCAL-00001" summary="Make SRA download cleaner">
       <created>1667855588919</created>

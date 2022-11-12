@@ -54,9 +54,8 @@ public class SraDownload extends ExecutableStep {
             srr_outputFile.entrySet().forEach(entry -> {
                 String srr = entry.getKey();
                 OutputFile outputFile = entry.getValue();
-                String command =
-                        fasterqDump.get() + " -p --split-spot --concatenate-reads -t " + outputFile.getParent() +
-                                " -o " + outputFile.getPath() + " " + srr;
+                String command = fasterqDump.get() + " -p --split-spot -t " + outputFile.getParent() + " -o " +
+                        outputFile.getPath() + " " + srr;
                 add(() -> {
                     executeAndWait(command, true);
                     return true;
