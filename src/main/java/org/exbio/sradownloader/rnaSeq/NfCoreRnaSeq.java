@@ -1,9 +1,10 @@
-package org.exbio.sradownloader;
+package org.exbio.sradownloader.rnaSeq;
 
 import org.exbio.pipejar.configs.ConfigTypes.FileTypes.InputFile;
 import org.exbio.pipejar.configs.ConfigTypes.FileTypes.OutputFile;
 import org.exbio.pipejar.configs.ConfigTypes.UsageTypes.RequiredConfig;
 import org.exbio.pipejar.pipeline.ExecutableStep;
+import org.exbio.sradownloader.Main;
 
 import java.util.Collection;
 import java.util.HashSet;

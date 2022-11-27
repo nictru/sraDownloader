@@ -2,13 +2,17 @@ package org.exbio.sradownloader;
 
 import org.exbio.pipejar.configs.ConfigTypes.FileTypes.OutputFile;
 import org.exbio.pipejar.pipeline.ExecutionManager;
+import org.exbio.sradownloader.input.CompressFastq;
+import org.exbio.sradownloader.input.SraDownload;
+import org.exbio.sradownloader.rnaSeq.CreateSampleSheet;
+import org.exbio.sradownloader.rnaSeq.NfCoreRnaSeq;
 
 import java.io.File;
 import java.io.IOException;
 
 public class Main {
-    static File workingDirectory;
-    static Configs configs;
+    public static File workingDirectory;
+    public static Configs configs;
 
     public static void main(String[] args) throws IOException {
         workingDirectory = new File(args[0]);

@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="067ff42c-d973-4260-874a-7324fe457952" name="Changes" comment="Working fastq compression" />
+    <list default="true" id="067ff42c-d973-4260-874a-7324fe457952" name="Changes" comment="Remove effectless sra download argument">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/SraDownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/SraDownload.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -88,7 +91,11 @@
       <workItem from="1668076752996" duration="773000" />
       <workItem from="1668099882225" duration="13000" />
       <workItem from="1668192711588" duration="7303000" />
-      <workItem from="1668241665621" duration="657000" />
+      <workItem from="1668241665621" duration="1281000" />
+      <workItem from="1668262764778" duration="1562000" />
+      <workItem from="1668352021467" duration="843000" />
+      <workItem from="1668963205503" duration="630000" />
+      <workItem from="1668966832680" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="Make SRA download cleaner">
       <created>1667855588919</created>
@@ -111,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668003477085</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Remove effectless sra download argument">
+      <created>1668245350093</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1668245350093</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +146,8 @@
     <MESSAGE value="Make SRA download cleaner" />
     <MESSAGE value="Redirect command output to console" />
     <MESSAGE value="Working fastq compression" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working fastq compression" />
+    <MESSAGE value="Remove effectless sra download argument" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove effectless sra download argument" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

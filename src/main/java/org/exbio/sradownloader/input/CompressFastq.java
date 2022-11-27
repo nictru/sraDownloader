@@ -1,9 +1,10 @@
-package org.exbio.sradownloader;
+package org.exbio.sradownloader.input;
 
 import org.exbio.pipejar.configs.ConfigTypes.FileTypes.OutputFile;
 import org.exbio.pipejar.configs.ConfigTypes.UsageTypes.RequiredConfig;
 import org.exbio.pipejar.pipeline.ExecutableStep;
 import org.exbio.pipejar.util.FileManagement;
+import org.exbio.sradownloader.Main;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -1,9 +1,10 @@
-package org.exbio.sradownloader;
+package org.exbio.sradownloader.input;
 
 import org.exbio.pipejar.configs.ConfigTypes.FileTypes.OutputFile;
 import org.exbio.pipejar.configs.ConfigTypes.UsageTypes.OptionalConfig;
 import org.exbio.pipejar.configs.ConfigTypes.UsageTypes.RequiredConfig;
 import org.exbio.pipejar.pipeline.ExecutableStep;
+import org.exbio.sradownloader.Main;
 
 import java.io.File;
 import java.io.IOException;
@@ -28,7 +29,7 @@ public class SraDownload extends ExecutableStep {
             readLines(runTable.get()).stream().filter(line -> line.startsWith("SRR")).map(
                     line -> line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)")).filter(splittedLine -> {
                 // TODO: write a more general filter option
-                // maybe create a map from column index to allowed values
+                //  maybe create a map from column index to allowed values
                 if (!excludeTreatments.isSet()) {
                     return true;
                 }
@@ -54,6 +55,9 @@ public class SraDownload extends ExecutableStep {
             srr_outputFile.entrySet().forEach(entry -> {
                 String srr = entry.getKey();
                 OutputFile outputFile = entry.getValue();
+                // TODO: Allow either --split-spot or --split-files as parameter. For paired-end reads,
+                //  --split-files is the right option. This is, because for paired-end SRAs, there are always exactly
+                //  two reads per spot.
                 String command = fasterqDump.get() + " -p --split-spot -t " + outputFile.getParent() + " -o " +
                         outputFile.getPath() + " " + srr;
                 add(() -> {
