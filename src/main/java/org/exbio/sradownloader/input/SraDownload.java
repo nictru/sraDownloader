@@ -4,7 +4,6 @@ import org.exbio.pipejar.configs.ConfigTypes.FileTypes.OutputFile;
 import org.exbio.pipejar.configs.ConfigTypes.UsageTypes.OptionalConfig;
 import org.exbio.pipejar.configs.ConfigTypes.UsageTypes.RequiredConfig;
 import org.exbio.pipejar.pipeline.ExecutableStep;
-import org.exbio.sradownloader.Main;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,11 +12,13 @@ import java.util.concurrent.Callable;
 
 import static org.exbio.pipejar.util.FileManagement.readLines;
 import static org.exbio.pipejar.util.ScriptExecution.executeAndWait;
+import static org.exbio.sradownloader.Main.configs;
 
 public class SraDownload extends ExecutableStep {
-    public final RequiredConfig<File> runTable = new RequiredConfig<>(Main.configs.runTable);
-    public final RequiredConfig<String> fasterqDump = new RequiredConfig<>(Main.configs.fasterqDump);
-    public final OptionalConfig<List> excludeTreatments = new OptionalConfig<>(Main.configs.excludeTreatments, false);
+    public final RequiredConfig<File> runTable = new RequiredConfig<>(configs.inputConfigs.sraConfigs.runTable);
+    public final RequiredConfig<String> fasterqDump = new RequiredConfig<>(configs.inputConfigs.sraConfigs.fasterqDump);
+    public final OptionalConfig<List> excludeTreatments =
+            new OptionalConfig<>(configs.inputConfigs.sraConfigs.excludeTreatments, false);
     private final Map<String, OutputFile> srr_outputFile = new HashMap<>();
 
     public SraDownload(OutputFile... dependencies) {

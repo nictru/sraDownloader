@@ -14,7 +14,8 @@ import java.util.concurrent.Callable;
 import static org.exbio.pipejar.util.ScriptExecution.executeAndWait;
 
 public class CompressFastq extends ExecutableStep {
-    public final RequiredConfig<String> gzipExecutable = new RequiredConfig<>(Main.configs.gzipExecutable);
+    public final RequiredConfig<String> gzipExecutable =
+            new RequiredConfig<>(Main.configs.inputConfigs.sraConfigs.gzipExecutable);
 
     public CompressFastq(Collection<OutputFile> fastqFiles) {
         super(fastqFiles);

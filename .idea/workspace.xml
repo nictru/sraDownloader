@@ -4,9 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="067ff42c-d973-4260-874a-7324fe457952" name="Changes" comment="Remove effectless sra download argument">
+    <list default="true" id="067ff42c-d973-4260-874a-7324fe457952" name="Changes" comment="Change project structure">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/InputConfigs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/SraConfigs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/rnaSeq/RnaSeqConfigs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/SraDownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/SraDownload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Configs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/CompressFastq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/CompressFastq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/SraDownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/SraDownload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/rnaSeq/NfCoreRnaSeq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/rnaSeq/NfCoreRnaSeq.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +102,7 @@
       <workItem from="1668352021467" duration="843000" />
       <workItem from="1668963205503" duration="630000" />
       <workItem from="1668966832680" duration="11000" />
+      <workItem from="1669577547246" duration="1288000" />
     </task>
     <task id="LOCAL-00001" summary="Make SRA download cleaner">
       <created>1667855588919</created>
@@ -125,7 +132,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668245350093</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Change project structure">
+      <created>1669578008788</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669578008788</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,7 +161,8 @@
     <MESSAGE value="Redirect command output to console" />
     <MESSAGE value="Working fastq compression" />
     <MESSAGE value="Remove effectless sra download argument" />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove effectless sra download argument" />
+    <MESSAGE value="Change project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change project structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

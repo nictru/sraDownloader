@@ -4,18 +4,19 @@ import org.exbio.pipejar.configs.ConfigTypes.FileTypes.InputFile;
 import org.exbio.pipejar.configs.ConfigTypes.FileTypes.OutputFile;
 import org.exbio.pipejar.configs.ConfigTypes.UsageTypes.RequiredConfig;
 import org.exbio.pipejar.pipeline.ExecutableStep;
-import org.exbio.sradownloader.Main;
 
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.concurrent.Callable;
 
 import static org.exbio.pipejar.util.ScriptExecution.executeAndWait;
+import static org.exbio.sradownloader.Main.configs;
 
 public class NfCoreRnaSeq extends ExecutableStep {
     public final OutputFile results;
     private final InputFile sampleSheet;
-    private final RequiredConfig<String> nextflowExecutable = new RequiredConfig<>(Main.configs.nextflowExecutable);
+    private final RequiredConfig<String> nextflowExecutable =
+            new RequiredConfig<>(configs.rnaSeqConfigs.nextflowExecutable);
 
     public NfCoreRnaSeq(Collection<OutputFile> fastqs, OutputFile sampleSheet) {
         super(fastqs, sampleSheet);
