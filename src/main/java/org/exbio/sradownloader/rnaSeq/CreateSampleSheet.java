@@ -14,7 +14,7 @@ public class CreateSampleSheet extends ExecutableStep {
     public final OutputFile sampleSheet;
 
     public CreateSampleSheet(Collection<OutputFile> dependencies) {
-        super(dependencies);
+        super(true, dependencies);
         sampleSheet = addOutput("sampleSheet.csv");
     }
 

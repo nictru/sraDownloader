@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="067ff42c-d973-4260-874a-7324fe457952" name="Changes" comment="Change project structure">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/InputConfigs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/SraConfigs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/rnaSeq/RnaSeqConfigs.java" afterDir="false" />
+    <list default="true" id="067ff42c-d973-4260-874a-7324fe457952" name="Changes" comment="Change config structure">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Configs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/Configs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/CompressFastq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/CompressFastq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/InputConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/InputConfigs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/SraConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/SraConfigs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/SraDownload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/input/SraDownload.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/rnaSeq/CreateSampleSheet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/rnaSeq/CreateSampleSheet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/rnaSeq/NfCoreRnaSeq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/rnaSeq/NfCoreRnaSeq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/rnaSeq/RnaSeqConfigs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/exbio/sradownloader/rnaSeq/RnaSeqConfigs.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,16 +60,19 @@
     &quot;code.cleanup.on.save&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/nico/Data/sraDownloader&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.5294118&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.New">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="org.exbio.sradownloader.Main" />
       <module name="SraDownloader" />
@@ -75,6 +81,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="New" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.exbio.sradownloader.Main" />
+      <module name="SraDownloader" />
+      <option name="PROGRAM_PARAMETERS" value="$USER_HOME$/Data/NewDownloader 8 $USER_HOME$/Data/NewDownloader/_meta/config.json" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.New" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -102,7 +120,22 @@
       <workItem from="1668352021467" duration="843000" />
       <workItem from="1668963205503" duration="630000" />
       <workItem from="1668966832680" duration="11000" />
-      <workItem from="1669577547246" duration="1288000" />
+      <workItem from="1669577547246" duration="1638000" />
+      <workItem from="1669618103164" duration="903000" />
+      <workItem from="1669807630257" duration="67000" />
+      <workItem from="1669807809665" duration="83000" />
+      <workItem from="1669807909166" duration="731000" />
+      <workItem from="1669826900787" duration="2632000" />
+      <workItem from="1669875936884" duration="73000" />
+      <workItem from="1669876024782" duration="182000" />
+      <workItem from="1669876221739" duration="32000" />
+      <workItem from="1669876266765" duration="644000" />
+      <workItem from="1669898809161" duration="651000" />
+      <workItem from="1669958755893" duration="1392000" />
+      <workItem from="1669973543588" duration="1255000" />
+      <workItem from="1670051056193" duration="609000" />
+      <workItem from="1670083023671" duration="11000" />
+      <workItem from="1671612171983" duration="3731000" />
     </task>
     <task id="LOCAL-00001" summary="Make SRA download cleaner">
       <created>1667855588919</created>
@@ -139,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669578008788</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Change config structure">
+      <created>1669578869653</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669578869653</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,7 +202,8 @@
     <MESSAGE value="Working fastq compression" />
     <MESSAGE value="Remove effectless sra download argument" />
     <MESSAGE value="Change project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change project structure" />
+    <MESSAGE value="Change config structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change config structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

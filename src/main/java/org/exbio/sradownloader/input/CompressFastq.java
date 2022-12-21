@@ -18,7 +18,7 @@ public class CompressFastq extends ExecutableStep {
             new RequiredConfig<>(Main.configs.inputConfigs.sraConfigs.gzipExecutable);
 
     public CompressFastq(Collection<OutputFile> fastqFiles) {
-        super(fastqFiles);
+        super(true, fastqFiles);
 
         fastqFiles.forEach(dependency -> addOutput(dependency.getName() + ".gz"));
     }

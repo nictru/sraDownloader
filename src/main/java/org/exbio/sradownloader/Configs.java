@@ -5,6 +5,6 @@ import org.exbio.sradownloader.input.InputConfigs;
 import org.exbio.sradownloader.rnaSeq.RnaSeqConfigs;
 
 public class Configs extends ConfigModuleCollection {
-    public final InputConfigs inputConfigs = new InputConfigs();
-    public final RnaSeqConfigs rnaSeqConfigs = new RnaSeqConfigs();
+    public static final InputConfigs inputConfigs = new InputConfigs();
+    public static final RnaSeqConfigs rnaSeqConfigs = new RnaSeqConfigs();
 }

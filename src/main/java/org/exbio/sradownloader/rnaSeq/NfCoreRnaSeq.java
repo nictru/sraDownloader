@@ -19,7 +19,7 @@ public class NfCoreRnaSeq extends ExecutableStep {
             new RequiredConfig<>(configs.rnaSeqConfigs.nextflowExecutable);
 
     public NfCoreRnaSeq(Collection<OutputFile> fastqs, OutputFile sampleSheet) {
-        super(fastqs, sampleSheet);
+        super(true, fastqs, sampleSheet);
         this.sampleSheet = addInput(sampleSheet);
         results = addOutput("results");
     }

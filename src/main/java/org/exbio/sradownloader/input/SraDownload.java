@@ -17,12 +17,12 @@ import static org.exbio.sradownloader.Main.configs;
 public class SraDownload extends ExecutableStep {
     public final RequiredConfig<File> runTable = new RequiredConfig<>(configs.inputConfigs.sraConfigs.runTable);
     public final RequiredConfig<String> fasterqDump = new RequiredConfig<>(configs.inputConfigs.sraConfigs.fasterqDump);
-    public final OptionalConfig<List> excludeTreatments =
+    public final OptionalConfig<List<String>> excludeTreatments =
             new OptionalConfig<>(configs.inputConfigs.sraConfigs.excludeTreatments, false);
     private final Map<String, OutputFile> srr_outputFile = new HashMap<>();
 
     public SraDownload(OutputFile... dependencies) {
-        super(dependencies);
+        super(false, dependencies);
         addInput(runTable);
 
         // Add outputs for required srr ids
