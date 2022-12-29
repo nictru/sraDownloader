@@ -1,5 +1,6 @@
 package org.exbio.sradownloader.input;
 
+import org.apache.commons.lang3.tuple.Pair;
 import org.exbio.pipejar.configs.ConfigTypes.FileTypes.OutputFile;
 import org.exbio.pipejar.configs.ConfigTypes.UsageTypes.OptionalConfig;
 import org.exbio.pipejar.configs.ConfigTypes.UsageTypes.RequiredConfig;
@@ -20,6 +21,7 @@ public class DownloadCompress extends ExecutableStep {
     public final RequiredConfig<String> gzip = new RequiredConfig<>(Configs.inputConfigs.sraConfigs.gzipExecutable);
     public final OptionalConfig<List<String>> excludeTreatments =
             new OptionalConfig<>(Configs.inputConfigs.sraConfigs.excludeTreatments, false);
+    public final Map<String, Pair<OutputFile, OutputFile>> outputFiles = new HashMap<>();
     private final Map<String, OutputFile> srr_outputDirectory = new HashMap<>();
     private final Map<String, Boolean> srr_paired = new HashMap<>();
 
@@ -49,7 +51,15 @@ public class DownloadCompress extends ExecutableStep {
                                          String fileName = srr + "_" + stage + "_" + group;
                                          OutputFile outputDirectory = addOutput(fileName);
                                          srr_outputDirectory.put(srr, outputDirectory);
-                                         srr_paired.put(srr, splitted[21].equalsIgnoreCase("paired"));
+                                         boolean paired = splitted[21].equalsIgnoreCase("paired");
+                                         srr_paired.put(srr, paired);
+
+                                         if (paired) {
+                                             outputFiles.put(srr, Pair.of(new OutputFile(outputDirectory, srr + "_1.fastq.gz"),
+                                                     new OutputFile(outputDirectory, srr + "_2.fastq.gz")));
+                                         } else {
+                                             outputFiles.put(srr, Pair.of(new OutputFile(outputDirectory, srr + ".fastq.gz"), null));
+                                         }
                                      });
         } catch (IOException e) {
             throw new RuntimeException("Could not read runTable.");

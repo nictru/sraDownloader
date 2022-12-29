@@ -20,6 +20,11 @@
             <artifactId>pipeJar</artifactId>
             <version>1.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -37,7 +42,7 @@
                         <archive>
                             <manifest>
                                 <addClasspath>true</addClasspath>
-                                <mainClass>org.exbio.sradownloader.Main</mainClass>
+                                <mainClass>org.exbio.sradownloader.SraDownloader</mainClass>
                             </manifest>
                         </archive>
                     </configuration>
@@ -47,7 +52,7 @@
                     <configuration>
                         <archive>
                             <manifest>
-                                <mainClass>org.exbio.sradownloader.Main</mainClass>
+                                <mainClass>org.exbio.sradownloader.SraDownloader</mainClass>
                             </manifest>
                         </archive>
                         <descriptorRefs>
