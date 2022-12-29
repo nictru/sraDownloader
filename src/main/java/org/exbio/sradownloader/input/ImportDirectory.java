@@ -20,7 +20,7 @@ public class ImportDirectory extends ExecutableStep {
     private final RequiredConfig<File> inputDir = new RequiredConfig<>(Configs.inputConfigs.directory);
     private final RequiredConfig<String> gzip = new RequiredConfig<>(Configs.inputConfigs.sraConfigs.gzipExecutable);
     private final InputFile input = addInput(inputDir);
-    Map<File, OutputFile> bridge = new HashMap<>();
+    private final Map<File, OutputFile> bridge = new HashMap<>();
 
 
     public ImportDirectory() {
@@ -41,15 +41,21 @@ public class ImportDirectory extends ExecutableStep {
 
                     if (pairs.size() == 1) {
                         OutputFile out = addOutput(outDir, sample + ".fastq.gz");
-                        bridge.put(pairs.get(0).getRight(), out);
+                        File first = pairs.get(0).getRight();
+                        bridge.put(first, out);
                         outputFiles.put(sample, Pair.of(out, null));
                     } else {
                         pairs.sort(Comparator.comparing(Pair::getLeft));
 
                         OutputFile out1 = addOutput(outDir, sample + "_1.fastq.gz");
                         OutputFile out2 = addOutput(outDir, sample + "_2.fastq.gz");
-                        bridge.put(pairs.get(0).getRight(), out1);
-                        bridge.put(pairs.get(1).getRight(), out2);
+
+                        File first = pairs.get(0).getRight();
+                        File second = pairs.get(1).getRight();
+
+                        bridge.put(first, out1);
+                        bridge.put(second, out2);
+
                         outputFiles.put(sample, Pair.of(out1, out2));
                     }
                 });
@@ -60,7 +66,7 @@ public class ImportDirectory extends ExecutableStep {
         return new HashSet<>() {{
             bridge.forEach((inputFile, outputFile) -> add(() -> {
                 if (inputFile.getName().endsWith(".gz")) {
-                    softLink(inputFile, outputFile);
+                    softLink(outputFile, inputFile);
                 } else {
                     String command =
                             gzip.get() + " -c " + inputFile.getAbsolutePath() + " > " + outputFile.getAbsolutePath();

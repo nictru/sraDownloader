@@ -16,6 +16,10 @@ public class SraDownloader extends Workflow<Configs> {
         super(args);
     }
 
+    public static void main(String[] args) throws IOException, ParseException {
+        new SraDownloader(args);
+    }
+
     @Override
     protected Configs createConfigs() {
         return new Configs();
@@ -26,9 +30,11 @@ public class SraDownloader extends Workflow<Configs> {
         final Map<String, Pair<OutputFile, OutputFile>> fastqFiles;
 
         if (Configs.inputConfigs.useSra.get()) {
+            logger.info("Downloading SRA files");
             DownloadCompress downloadCompress = add(new DownloadCompress());
             fastqFiles = downloadCompress.outputFiles;
         } else {
+            logger.info("Importing fastq files");
             ImportDirectory importDirectory = add(new ImportDirectory());
             fastqFiles = importDirectory.outputFiles;
         }

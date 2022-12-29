@@ -49,16 +49,16 @@ public class DownloadCompress extends ExecutableStep {
                                          String stage = splitted[15].replaceAll("[ ._]", "-");
                                          String group = splitted[24].replaceAll("[ ._]", "-");
                                          String fileName = srr + "_" + stage + "_" + group;
-                                         OutputFile outputDirectory = addOutput(fileName);
-                                         srr_outputDirectory.put(srr, outputDirectory);
+                                         OutputFile outDir = new OutputFile(outputDirectory, fileName);
+                                         srr_outputDirectory.put(srr, outDir);
                                          boolean paired = splitted[21].equalsIgnoreCase("paired");
                                          srr_paired.put(srr, paired);
 
                                          if (paired) {
-                                             outputFiles.put(srr, Pair.of(new OutputFile(outputDirectory, srr + "_1.fastq.gz"),
-                                                     new OutputFile(outputDirectory, srr + "_2.fastq.gz")));
+                                             outputFiles.put(srr,
+                                                     Pair.of(addOutput(outDir, srr + "_1.fastq.gz"), addOutput(outDir, srr + "_2.fastq.gz")));
                                          } else {
-                                             outputFiles.put(srr, Pair.of(new OutputFile(outputDirectory, srr + ".fastq.gz"), null));
+                                             outputFiles.put(srr, Pair.of(addOutput(outDir, srr + ".fastq.gz"), null));
                                          }
                                      });
         } catch (IOException e) {
